@@ -1,0 +1,15 @@
+cidade(pa, brasilia).
+cidade(br, rio_de_janeiro).
+cidade(br, sao_paulo).
+cidade(us, nova_york).
+cidade(us, los_angeles).
+cidade(fr, paris).
+cidade(fr, marselha).
+cidade(es, madrid).
+cidade(es, barcelona).
+cidade(jp, tokyo).
+
+cidades_em_pais(Pais, ListaCidades) :-
+    findall(Cidade, cidade(Pais, Cidade), ListaCidades).
+
+main :- true.

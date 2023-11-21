@@ -1,0 +1,15 @@
+distancia(rio_do_sul, uberlandia, 1249).
+distancia(rio_do_sul, florianopolis, 197).
+distancia(uberlandia, florianopolis, 1264).
+distancia(uberlandia, rio_branco, 2999).
+distancia(florianopolis, rio_branco, 3940).
+distancia(florianopolis, fortaleza, 3601).
+distancia(rio_branco, fortaleza, 6375).
+distancia(rio_branco, manaus, 1395).
+distancia(fortaleza, manaus, 4210).
+distancia(fortaleza, cariacica, 2146).
+
+cidade_mais_proxima(CidadeOrigem, CidadeMaisProxima) :-
+    findall(Distancia, distancia(CidadeOrigem, CidadeDestino, Distancia_KM), Distancias),
+    min_list(Distancias, MenorDistancia),
+    distancia(CidadeOrigem, CidadeMaisProxima, MenorDistancia).

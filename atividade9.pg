@@ -1,0 +1,15 @@
+pais(argentina, espanhol).
+pais(azerbaijao, azerbaijano).
+pais(brasil, portugues).
+pais(inglaterra, ingles).
+pais(coreia_do_sul, coreano).
+pais(timor_leste, portugues).
+pais(franca, frances).
+pais(alemanha, alemao).
+pais(australia, ingles).
+pais(espanha, espanhol).
+
+idiomas_de_cada_pais(Pais, ListaPaises) :-
+    findall(Pais, pais(Pais, Idioma), ListaPaises).
+
+main :- true.

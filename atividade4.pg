@@ -1,0 +1,26 @@
+:- initialization(main).
+
+main :-
+    consultar_estoque.
+    halt.
+    
+consultar_estoque :-
+    produto(Nome, Preco, Qtd),
+    Qtd == 0,
+    write(Nome),
+    write(' se encontra fora do estoque :('), nl,
+    fail.
+consultar_estoque.
+    
+produto(abajur_1, 549, 30).
+produto(abajur_2, 499, 62).
+produto(abajur_3, 129, 0).
+produto(abajur_4, 599, 19).
+produto(abajur_5, 2999, 12).
+produto(abajur_6, 399, 5).
+produto(abajur_7, 99, 0).
+produto(abajur_8, 149, 0).
+produto(abajur_9, 849, 28).
+produto(abajur_10, 449, 0).
+
+main :- true.

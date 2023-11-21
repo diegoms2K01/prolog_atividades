@@ -1,0 +1,15 @@
+animal(mamifero, raposa).
+animal(mamifero, cachorro).
+animal(anfibio, sapo).
+animal(inseto, abelha).
+animal(reptil, lagarto).
+animal(inseto, mosca).
+animal(mamifero, canguru).
+animal(ave, aguia).
+animal(reptil, cobra).
+animal(ave, pardal).
+
+animais_especie(Animal, ListaAnimais) :-
+    findall(Animal, animal(Pais, Animal), ListaAnimais).
+
+main :- true.

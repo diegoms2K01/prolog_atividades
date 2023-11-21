@@ -1,0 +1,15 @@
+cidade(lofi, linearwave_she_share_story).
+cidade(rock, wake_me_up_when_september_ends).
+cidade(trance, onova_platitude).
+cidade(lofi, lando_dust_bunnies).
+cidade(rock, green_day_sassafras_roots).
+cidade(dnb, technimatic_perseverance).
+cidade(lofi, halberd_long_ago).
+cidade(lofi, aimless_oliver).
+cidade(trance, ilan_bluestone_spheres).
+cidade(dnb, krakot_take_me_there).
+
+faixas_do_mesmo_genero(Genero, Playlist) :-
+    findall(Genero, qual_genero(Genero, Faixa), Playlist).
+
+main :- true.

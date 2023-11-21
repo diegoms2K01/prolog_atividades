@@ -1,0 +1,25 @@
+:- initialization(main).
+
+main :-
+    listar_cores_dos_objetos.
+
+listar_cores_dos_objetos :-
+    cor(Objeto, Cor),
+    Cor == 'verde',
+    write('Temos um(a) '),
+    write(Objeto),
+    write(' da cor '),
+    write(Cor), nl,
+    fail.
+listar_cores_dos_objetos.
+
+cor(saleiro,amarela).
+cor(porta,verde).
+cor(chave,vermelha).
+cor(botao,azul).
+cor(abajur,verde).
+cor(outro_abajur,verde).
+cor(espelho,roxa).
+cor(tapete,verde).
+cor(estatua,laranja).
+cor(fritadeira,gelo).

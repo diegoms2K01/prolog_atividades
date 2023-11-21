@@ -1,0 +1,25 @@
+:- initialization(main).
+
+main :-
+    listar_pessoas_acima_de_30_anos.
+
+listar_pessoas_acima_de_30_anos :-
+    idade(Nome, Idade),
+    Idade > 30,
+    write(Nome),
+    write(' possui mais de 30 anos (idade: '),
+    write(Idade),
+    write(')'), nl,
+    fail.
+listar_pessoas_acima_de_30_anos.
+
+idade(bob,36).
+idade(jimmy,21).
+idade(doug,27).
+idade(amanda,32).
+idade(simon,36).
+idade(zoe,15).
+idade(joe,24).
+idade(brooke,19).
+idade(lisa,22).
+idade(sam,31).

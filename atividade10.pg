@@ -1,0 +1,20 @@
+ingrediente(ovo).
+ingrediente(farinha).
+ingrediente(acucar).
+ingrediente(leite).
+ingrediente(chocolate).
+ingrediente(manteiga).
+ingrediente(framboesa).
+ingrediente(morangos).
+ingrediente(cacau).
+ingrediente(creme_de_leite).
+
+receita(bolo_de_chocolate, [farinha, acucar, ovo, leite, chocolate, manteiga, cacau, creme_de_leite]).
+receita(torta_de_morangos, [farinha, acucar, morangos, creme_de_leite]).
+receita(bolo_de_framboesa, [farinha, acucar, ovo, leite, framboesa, creme_de_leite]).
+
+receitas_com_ingrediente(Ingrediente) :-
+    receita(NomeReceita, Ingredientes),
+    member(Ingrediente, Ingredientes),
+    write(NomeReceita), nl,
+    fail.

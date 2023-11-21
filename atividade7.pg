@@ -1,0 +1,27 @@
+:- initialization(main).
+
+main :-
+    consultar_nota.
+    halt.
+    
+consultar_nota :-
+    aluno(Nome, Disciplina, Nota),
+    Nota >= 5,
+    write(Nome),
+    write(' - Nota : '), nl,
+    write(Nota),
+    fail.
+consultar_nota.
+    
+aluno(abajur_1, geography, 8).
+aluno(abajur_2, geography, 6).
+aluno(abajur_3, geography, 10).
+aluno(abajur_4, geography, 9).
+aluno(abajur_5, geography, 2).
+aluno(abajur_6, geography, 5).
+aluno(abajur_7, geography, 10).
+aluno(abajur_8, geography, 7).
+aluno(abajur_9, geography, 8).
+aluno(abajur_10, geography, 4).
+
+main :- true.
